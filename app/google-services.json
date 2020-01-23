@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "278988116518",
+    "firebase_url": "https://casadorna-b0f82.firebaseio.com",
+    "project_id": "casadorna-b0f82",
+    "storage_bucket": "casadorna-b0f82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278988116518:android:43d7cc38769529c58c4ce7",
+        "android_client_info": {
+          "package_name": "com.feri.casadorna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278988116518-b0rejdldmapphhl2p5rbcpihhdmq1jlj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.feri.casadorna",
+            "certificate_hash": "42f949a9b2bfcbee1bc949da5c8a14d3ead4bd93"
+          }
+        },
+        {
+          "client_id": "278988116518-26moij3thmornupbj4q09ucj90qktksb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWZpWUbkcRFbjlOKP35wR0_xsuVOvuMWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "278988116518-26moij3thmornupbj4q09ucj90qktksb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278988116518:android:036013a6a3bebf858c4ce7",
+        "android_client_info": {
+          "package_name": "com.feri.murahjaya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278988116518-856faoagdmcru7i9ckgrle1safk0u1nk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.feri.murahjaya",
+            "certificate_hash": "42f949a9b2bfcbee1bc949da5c8a14d3ead4bd93"
+          }
+        },
+        {
+          "client_id": "278988116518-26moij3thmornupbj4q09ucj90qktksb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWZpWUbkcRFbjlOKP35wR0_xsuVOvuMWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "278988116518-26moij3thmornupbj4q09ucj90qktksb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278988116518:android:a0d87f07712451868c4ce7",
+        "android_client_info": {
+          "package_name": "com.feri.murahjayaadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278988116518-ikd89nup2cefp88bhfd5sj9c33hflftc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.feri.murahjayaadmin",
+            "certificate_hash": "42f949a9b2bfcbee1bc949da5c8a14d3ead4bd93"
+          }
+        },
+        {
+          "client_id": "278988116518-26moij3thmornupbj4q09ucj90qktksb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWZpWUbkcRFbjlOKP35wR0_xsuVOvuMWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "278988116518-26moij3thmornupbj4q09ucj90qktksb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
