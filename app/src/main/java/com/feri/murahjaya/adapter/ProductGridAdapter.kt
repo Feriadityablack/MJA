@@ -5,17 +5,20 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.feri.murahjaya.R
+import com.feri.murahjaya.firebase.Firestore
 import com.feri.murahjaya.model.Product
+import com.feri.murahjaya.utils.ITEMTYPE
 import com.feri.murahjaya.utils.intToRupiah
 import com.feri.murahjaya.view.ProductDetailActivity
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import kotlinx.android.synthetic.main.product_grid_item.view.*
 
-class ProductGridAdapter(private val context: Context, options: FirestoreRecyclerOptions<Product>) :
+class ProductGridAdapter(private val context: Context, options: FirestoreRecyclerOptions<Product>, private val itemtype: ITEMTYPE, private val emptyView: View?) :
     FirestoreRecyclerAdapter<Product, ProductGridAdapter.ViewHolder>(options) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -25,11 +28,36 @@ class ProductGridAdapter(private val context: Context, options: FirestoreRecycle
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int, model: Product) {
+
+        if (itemtype == ITEMTYPE.GENERAL) {
+            holder.itemView.fabFavorite.setImageDrawable(
+                ContextCompat.getDrawable(
+                    context,
+                    R.drawable.ic_favorite
+                )
+            )
+        } else {
+            holder.itemView.fabFavorite.setImageDrawable(
+                ContextCompat.getDrawable(
+                    context,
+                    R.drawable.ic_stop
+                )
+            )
+        }
+
         holder.bind(model)
-        holder.itemView.setOnClickListener {
+        holder.itemView.contentView.setOnClickListener {
             val intent = Intent(context, ProductDetailActivity::class.java)
             intent.putExtra("product", model)
             context.startActivity(intent)
+        }
+
+        holder.itemView.fabFavorite.setOnClickListener {
+            if (itemtype == ITEMTYPE.FAVORITE) {
+                Firestore(context).removeFromFavorite(model)
+            } else {
+                Firestore(context).addToFavorite(model)
+            }
         }
     }
 

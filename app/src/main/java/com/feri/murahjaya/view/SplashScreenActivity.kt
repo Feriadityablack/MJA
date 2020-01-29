@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_splash_screen.*
 class SplashScreenActivity : AppCompatActivity() {
 
     private val runnable = Runnable {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, SignInActivity::class.java))
         finish()
     }
 

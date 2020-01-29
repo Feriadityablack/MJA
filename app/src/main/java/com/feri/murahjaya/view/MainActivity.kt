@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.fragment.app.Fragment
 import com.feri.murahjaya.R
 import com.feri.murahjaya.view.fragment.CartFragment
@@ -14,12 +15,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    companion object{
-        private val homeFragment = HomeFragment()
-        private val cartFragment = CartFragment()
-        private val profileFragment = ProfileFragment()
-        private var activeFragment: Fragment = homeFragment
-    }
+    private val homeFragment = HomeFragment()
+    private val cartFragment = CartFragment()
+    private val profileFragment = ProfileFragment()
+    private var activeFragment: Fragment = homeFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,10 +26,6 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Murah Jaya"
         supportActionBar?.subtitle = "Temukan furniture unik"
-
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction().replace(R.id.main_container, activeFragment).commit()
-        }
 
         bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
     }
@@ -40,16 +35,19 @@ class MainActivity : AppCompatActivity() {
             R.id.nav_home -> {
                 supportFragmentManager.beginTransaction().replace(R.id.main_container, homeFragment).commit()
                 activeFragment = homeFragment
+                searchLayout.visibility = View.VISIBLE
                 true
             }
             R.id.nav_cart -> {
                 supportFragmentManager.beginTransaction().replace(R.id.main_container, cartFragment).commit()
                 activeFragment = cartFragment
+                searchLayout.visibility = View.GONE
                 true
             }
             R.id.nav_profile -> {
                 supportFragmentManager.beginTransaction().replace(R.id.main_container, profileFragment).commit()
                 activeFragment = profileFragment
+                searchLayout.visibility = View.GONE
                 true
             }
             else -> false
@@ -59,5 +57,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
         return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        supportFragmentManager.beginTransaction().replace(R.id.main_container, activeFragment).commit()
     }
 }

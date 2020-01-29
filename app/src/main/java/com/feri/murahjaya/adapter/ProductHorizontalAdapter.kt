@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.feri.murahjaya.R
+import com.feri.murahjaya.firebase.Firestore
 import com.feri.murahjaya.model.Product
 import com.feri.murahjaya.utils.intToRupiah
 import com.feri.murahjaya.view.ProductDetailActivity
@@ -26,10 +27,14 @@ class ProductHorizontalAdapter(private val context: Context, options: FirestoreR
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int, model: Product) {
         holder.bind(model)
-        holder.itemView.setOnClickListener {
+        holder.itemView.contentView.setOnClickListener {
             val intent = Intent(context, ProductDetailActivity::class.java)
             intent.putExtra("product", model)
             context.startActivity(intent)
+        }
+
+        holder.itemView.fabFavorite.setOnClickListener {
+            Firestore(context).addToFavorite(model)
         }
     }
 

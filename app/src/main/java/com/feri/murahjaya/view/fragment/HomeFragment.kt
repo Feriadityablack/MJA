@@ -47,6 +47,8 @@ class HomeFragment : Fragment() {
             intent.putExtra("state", LIST_TYPE.BYALL.ordinal)
             startActivity(intent)
         }
+
+
     }
 
     private fun initList() {

@@ -11,7 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".view.ProductListActivity"></activity>
+        <activity android:name=".view.PaymentActivity"></activity>
+        <activity android:name=".view.ProfileChangeActivity" />
+        <activity android:name=".view.AdditionalAddressActivity" />
+        <activity android:name=".view.ProfileSettingActivity" />
+        <activity android:name=".view.ProductListActivity" />
         <activity android:name=".view.SignInWithEmailActivity" />
         <activity android:name=".view.OrderActivity" />
         <activity android:name=".view.SplashScreenActivity">

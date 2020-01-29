@@ -6,6 +6,5 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class User(
     var uid: String = "",
-    var nama: String = "",
-    var telepon: String = ""
+    var nama: String = ""
 ): Parcelable

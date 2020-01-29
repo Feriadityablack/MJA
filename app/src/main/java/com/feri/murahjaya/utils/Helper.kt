@@ -9,6 +9,7 @@ import com.feri.murahjaya.R
 
 enum class STATUS(val status: String) {
     WAITING(status = "Menunggu Pembayaran"),
+    PAYED(status = "Sudah Di Bayar"),
     PROCESS(status = "Sedang Di Proses"),
     DELIVERY(status = "Pengiriman"),
     COMPLETED(status = "Selesai")
@@ -23,6 +24,23 @@ enum class CATEGORY(val category: String){
 enum class LIST_TYPE {
     BYCATEGORY,
     BYALL
+}
+
+enum class UPDATETYPE {
+    FIRSTUSERNAME,
+    USERNAME,
+    PASSWORD,
+    IMAGE
+}
+
+enum class ITEMTYPE {
+    FAVORITE,
+    GENERAL
+}
+
+enum class ADDRESSHANDLER {
+    GET,
+    EDIT
 }
 
 fun createToast(context: Context, message: String?) {

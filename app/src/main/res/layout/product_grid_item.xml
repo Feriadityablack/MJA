@@ -12,6 +12,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/contentView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -19,7 +20,7 @@
             <ImageView
                 android:id="@+id/productImage"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="170dp"
                 android:background="@android:color/darker_gray"
                 android:src="@drawable/ic_closet"
                 android:scaleType="centerInside" />
