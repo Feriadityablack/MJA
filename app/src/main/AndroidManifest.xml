@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".view.PaymentActivity"></activity>
+        <activity android:name=".view.SearchActivity"></activity>
+        <activity android:name=".view.PaymentActivity" />
         <activity android:name=".view.ProfileChangeActivity" />
         <activity android:name=".view.AdditionalAddressActivity" />
         <activity android:name=".view.ProfileSettingActivity" />

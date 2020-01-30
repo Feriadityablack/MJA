@@ -1,5 +1,6 @@
 package com.feri.murahjaya.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.subtitle = "Temukan furniture unik"
 
         bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+
+        bt_search.setOnClickListener { startActivity(Intent(this, SearchActivity::class.java)) }
     }
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener {menuItem ->
